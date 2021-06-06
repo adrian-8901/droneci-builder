@@ -53,10 +53,10 @@ if [ ! -z "$1" ] && [ "$1" == 'initial' ];then
     
     if [ ! -z "$2" ] && [ "$2" == 'full' ];then
         getInfo ">> cloning kernel full . . . <<"
-        git clone https://$GIT_SECRET@github.com/ZyCromerZ/begonia_kernel -b "$branch" $kernelDir
+        git clone https://github.com/Official-Ayrton990/android_kernel_xiaomi_sm8250.git -b QK-eleven $kernelDir
     else
         getInfo ">> cloning kernel . . . <<"
-        git clone https://$GIT_SECRET@github.com/ZyCromerZ/begonia_kernel -b "$branch" $kernelDir --depth=1 
+        git clone https://github.com/Official-Ayrton990/android_kernel_xiaomi_sm8250.git -b QK-eleven $kernelDir --depth=1 
     fi
     [ -z "$BuilderKernel" ] && BuilderKernel="clang"
     if [ "$BuilderKernel" == "clang" ];then
@@ -89,19 +89,19 @@ if [ ! -z "$1" ] && [ "$1" == 'initial' ];then
     getInfo ">> cloning Gdrive Uploader . . . <<"
     git clone https://$GIT_SECRET@github.com/ZyCromerZ/gdrive_uploader -b master $GdriveDir --depth=1 
     
-    DEVICE="Redmi Note 8 pro"
-    CODENAME="Begonia"
-    SaveChatID="-1001301538740"
+    DEVICE="Xiaomi MI 10"
+    CODENAME="Umi"
+    SaveChatID="-1001232702739"
     ARCH="arm64"
     TypeBuild="Stable"
-    DEFFCONFIG="begonia_user_defconfig"
+    DEFFCONFIG="umi_defconfig"
     GetBD=$(date +"%m%d")
     GetCBD=$(date +"%Y-%m-%d")
     TotalCores=$(nproc --all)
     TypeBuildTag="AOSP-CFW"
     FullLto="Nope"
     FolderUp=""
-    export KBUILD_BUILD_USER="ZyCromerZ"
+    export KBUILD_BUILD_USER="Adrian"
     export KBUILD_BUILD_HOST="DroneCI-server"
     # export KBUILD_BUILD_VERSION=$DRONE_BUILD_NUMBER
     if [ "$BuilderKernel" == "gcc" ];then
