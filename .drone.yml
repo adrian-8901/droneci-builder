@@ -9,7 +9,7 @@ steps:
   - 
     commands: 
       - "bash ./main.sh"
-      - "bash ./umi-aosp-qk.sh
+      - "bash ./umi-aosp-qk.sh"
     environment: 
       BOT_TOKEN: 
         from_secret: BOT_API_KEY
