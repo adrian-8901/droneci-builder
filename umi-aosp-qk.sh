@@ -5,7 +5,7 @@ BuilderKernel="00000"
 . main.sh 'initial' 'full'
 export KBUILD_BUILD_VERSION=9
 
-spectrumFile="bego-on-p.rc"
+spectrumFile="umi-on-q.rc"
 TypeBuild="Personal-Stable"
 TypeBuildTag="AOSP-CFW"
 getInfo ">> Building kernel . . . . <<"
